@@ -11,8 +11,8 @@ import json
 # Load model dan scaler
 @st.cache_resource
 def load_model():
-    model = joblib.load('best_churn_model_v3.pkl')
-    scaler = joblib.load('scaler_v3.pkl')
+    model = joblib.load('best_churn_model_v2.pkl')
+    scaler = joblib.load('scaler.pkl')
     with open('model_columns.json', 'r') as f:
         model_columns = json.load(f)
     return model, scaler, model_columns
